@@ -24,8 +24,7 @@ function getData(renderer, type, userid=""){
     .then((response)=>response.text())
     .then((text)=>{
         const jsonData = JSON.parse(text);
-        console.log(jsonData);
-        renderer();
+        renderer(jsonData);
     })
 }
 
@@ -43,7 +42,7 @@ function renderActionBar(){
         btn.className="action-button"
         btn.onclick=function(){//actionBarList[i][2];
             console.log(getUserID());
-            actionBarList[i][1]();
+            //actionBarList[i][1]();
             getData(actionBarList[i][1],actionBarList[i][2],getUserID());
         }
         actionBarEle.appendChild(btn);
