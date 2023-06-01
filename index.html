@@ -10,14 +10,17 @@
 </head>
 <body>
 
+    <input type="checkbox" id="testModeCheckbox">
+    <label for="testModeCheckbox">체크하면 테스트 케이스로 렌더링. 체크 안하면 통신해서 출력</label>
     <div class="search-user">
         <input type="text" name="q" placeholder="유저 아이디">
     </div>
     <div class="action-bar"></div>
     <div class="wrapper"></div>
 
+    <script src="src/js/testDataSet.js"></script>
     <script src="src/js/renderForceTable.js"></script>
-    <script src="src/js/renderItemTable.js"></script>
+    <script src="src/js/renderItemList.js"></script>
     <script src="src/js/renderItemChart.js"></script>
     <script src="src/js/renderActionBar.js"></script>
     <script src="src/js/main.js"></script>

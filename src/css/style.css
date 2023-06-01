@@ -36,6 +36,7 @@ input{
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -81,6 +82,7 @@ ol {
 li {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  font-weight: bold;
 }
 
 li:last-child {
@@ -89,5 +91,8 @@ li:last-child {
 
 li:hover {
   background-color: #f5f5f5;
-  color:cornflowerblue;
+}
+
+li:nth-child(1) {
+  color:goldenrod;
 }

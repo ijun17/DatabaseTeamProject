@@ -1,38 +1,33 @@
 const actionBarEle = document.querySelector(".action-bar")
+const testModeCheckbox = document.getElementById('testModeCheckbox');
 
 //[이름,renderer,요청키워드]
 const actionBarList = [
-    ["스타포스",renderStarforce,0],
-    ["스타포스(파괴방지)",renderStarforcePreventBreak,1],
-    ["주문서 강화",renderScrollforce,2],
-    ["주문서 강화(파괴방지)",renderScrollforcePreventBreak,3],
-    ["장비 아이템 획득",renderJangItemGet,4],
-    ["소비 아이템 획득",renderSoItemGet,5],
-    ["소비 아이템 사용",renderSoItemUse,6],
-    ["월드아이템 구매",renderItemChart,7]
+    ["스타포스",renderStarforce,"starforce"],
+    ["스타포스(파괴방지)",renderStarforcePreventBreak,"starforcePreventBreak"],
+    ["주문서 강화",renderScrollforce,"scrollforce"],
+    ["주문서 강화(파괴방지)",renderScrollforcePreventBreak,"scrollforcePreventBreak"],
+    ["장비 아이템 획득",renderJangItemGet,"um"],
+    ["소비 아이템 획득",renderSoItemGet,"jun"],
+    ["소비 아이템 사용",renderSoItemUse,"sick"],
+    ["월드아이템 구매",renderItemChart,"worldItemBuy"]
 ]
-
-function getData(renderer, type, userid=""){
-    const url="";
-    fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: type+" "+userid
-      })
-    .then((response)=>response.text())
-    .then((text)=>{
-        const jsonData = JSON.parse(text);
-        renderer(jsonData);
-    })
-}
 
 function getUserID(){
     let value = document.querySelector("input").value;
-    if(value=="")return "*";
-    else return value; 
+    return value;
 }
+
+async function fetchData(key) {
+    let url="http://localhost:3001"//'https://minework.shop/now'
+    return fetch(url+"/"+key+"/"+getUserID())
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => console.error('Error:', error));
+}
+
 
 function renderActionBar(){
     let btn;
@@ -40,10 +35,13 @@ function renderActionBar(){
         btn=document.createElement("button");
         btn.innerText=actionBarList[i][0];
         btn.className="action-button"
-        btn.onclick=function(){//actionBarList[i][2];
-            console.log(getUserID());
-            //actionBarList[i][1]();
-            getData(actionBarList[i][1],actionBarList[i][2],getUserID());
+        btn.onclick=async function(){
+            if(testModeCheckbox.checked){
+                actionBarList[i][1](TEST_DATASET[i]);
+            }else{
+                let data = await fetchData(actionBarList[i][2]);
+                actionBarList[i][1](data);
+            }
         }
         actionBarEle.appendChild(btn);
     }
