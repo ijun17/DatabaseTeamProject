@@ -98,38 +98,22 @@ const TEST_DATASET=[
 
     //4 장비 아이템 획득
     [
-        { itemName: '파워엘릭서', getCount: 46 },
-        { itemName: '이노센트 주문서 50%', getCount: 20 },  
-        { itemName: '레전드 드래곤 스태프', getCount: 9 },  
-        { itemName: '레전드 드래곤 세인트', getCount: 8 },  
-        { itemName: '레전드 드래곤 카라벨라', getCount: 8 },
-        { itemName: '레전드 드래곤 샤인보우', getCount: 8 },
-        { itemName: '로얄 블랙메탈 숄더', getCount: 8 },    
-        { itemName: '데아 시두스 이어링', getCount: 7 },    
-        { itemName: '실버블라썸 링', getCount: 7 },
-        { itemName: '발록 자석펫', getCount: 7 },
-        { itemName: '이노센트 주문서 100%', getCount: 7 },  
-        { itemName: '레전드 드래곤 크리스', getCount: 5 },  
-        { itemName: '매커네이터 팬던트', getCount: 5 },     
-        { itemName: '응축된 힘의 결정석', getCount: 5 },
-        { itemName: '아쿠아틱 레터 눈장식', getCount: 4 },
-        { itemName: '캐스터스', getCount: 4 },
-        { itemName: '자쿰의 포이즈닉 건', getCount: 3 },
-        { itemName: '장미꽃', getCount: 3 },
-        { itemName: '메투스', getCount: 2 },
-        { itemName: '자쿰의 포이즈닉 보우', getCount: 2 },
-        { itemName: '자쿰의 포이즈닉 완드', getCount: 2 },
-        { itemName: '카오스 혼테일의 목걸이', getCount: 2 },
-        { itemName: '피스메이커', getCount: 2 },
-        { itemName: '블랙 네오 바지', getCount: 1 },
-        { itemName: '타임리스 문라이트', getCount: 1 },
-        { itemName: '자쿰의 포이즈닉 대거', getCount: 1 },
-        { itemName: '도미네이터 팬던트', getCount: 1 },
-        { itemName: '타임리스 휀넬', getCount: 1 },
-        { itemName: '타임리스 타라곤', getCount: 1 },
-        { itemName: '골드 메이플리프 엠블렘', getCount: 1 },
-        { itemName: '연습용 신발', getCount: 1 }
+        { itemName: '최강 요원 슈트', getCount: 8 },        
+        { itemName: '메이플 기념모자', getCount: 6 },       
+        { itemName: '발록 자석펫', getCount: 4 },
+        { itemName: '연습용 신발', getCount: 3 },
+        { itemName: 'IronSword', getCount: 3 },
+        { itemName: '초보 마법사의 완드', getCount: 3 },    
+        { itemName: '파란색 가운', getCount: 2 },
+        { itemName: '티타니아 자석펫', getCount: 2 },       
+        { itemName: '장어구이', getCount: 1 },
+        { itemName: '베테랑 크로스 숄더', getCount: 1 },    
+        { itemName: '레드 오리엔타이칸 모자', getCount: 1 },
+        { itemName: '베인활', getCount: 1 },
+        { itemName: '미스릴 브리스트', getCount: 1 },       
+        { itemName: '베인아대', getCount: 1 }
     ],
+      
 
     //5 소비아이템 획득
     [
