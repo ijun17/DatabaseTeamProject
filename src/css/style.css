@@ -10,7 +10,7 @@ body {
   background-color:goldenrod;
 }
 
-input{
+#userid{
   padding: 10px;
   margin: 20px;
   border: 1px solid #ccc;

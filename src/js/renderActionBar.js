@@ -15,20 +15,17 @@ const actionBarList = [
 
 function getUserID(){
     let value = document.getElementById("userid").value;
-    if(value.length=="")return "";
+    if(value=="")return "";
     else return "/"+value;
 }
 
-async function fetchData(key, callback) {
-    let root="http://localhost:3001"
-    let url=root+key+getUserID()//'https://minework.shop/now'
+function fetchData(key, callback) {
+    let url=key+getUserID()
     console.log(url)
+    wrapper.innerHTML=""
     fetch(url)
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            callback(data);
-        })
+        .then(data => {callback(data);})
         .catch(error => console.error('Error:', error));
 }
 
@@ -39,7 +36,7 @@ function renderActionBar(){
         btn=document.createElement("button");
         btn.innerText=actionBarList[i][0];
         btn.className="action-button"
-        btn.onclick=async function(){
+        btn.onclick=function(){
             if(testModeCheckbox.checked) actionBarList[i][1](TEST_DATASET[i]);
             else fetchData(actionBarList[i][2], actionBarList[i][1]);
         }
