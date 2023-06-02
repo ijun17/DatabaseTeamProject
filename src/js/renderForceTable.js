@@ -10,7 +10,7 @@ function getFT(name, body){
                 <th><span>횟수</span></th>
                 <th><span>설정 확률</span></th>
                 <th><span>실제 확률</span></th>
-                ${getUserID()==""?"<th><span>편차</span></th>":""}
+                ${getUserID()!=""?"<th><span>편차</span></th>":""}
             </tr>
         </thead>
         <tbody class="starforce-body">${body}</tbody>
@@ -33,7 +33,7 @@ function getFTR(name, counts, successRate, breakRate, successRateEntire){
     let head=`<td rowspan="${rowspan}"><span>${name}</span></td>`
     let pyucha=(per(counts.success,sum)-successRateEntire).toFixed(2);
     let pyuchaCSS=(pyucha>0?"blue":"red")
-    let tail=(getUserID()=="") ? `<td style="color:${pyuchaCSS}" rowspan="${rowspan}"><span>${pyucha}</span></td>` : ""
+    let tail=(getUserID()!="") ? `<td style="color:${pyuchaCSS}" rowspan="${rowspan}"><span>${pyucha}</span></td>` : ""
     let result=`<tr">${head+getFTRS("성공", counts.success, successRate, per(counts.success,sum))+tail}</tr>`
     if(F)result+=`<tr style="color:gray;background-color: #f9f9f9;">${getFTRS("실패", counts.fail, 100-successRate-breakRate, per(counts.fail,sum))}</tr>`
     if(B)result+=`<tr style="color:red">${getFTRS("파괴", counts.breaks, breakRate, per(counts.breaks,sum))}</tr>`
