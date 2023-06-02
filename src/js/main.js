@@ -4,13 +4,11 @@ let scrollforce_entire;
 let scrollforceD_entire;
 
 async function init(){
-    //renderStarforce();
-    starforce_entire = await fetchData(actionBarList[0][2], (data)=>{console.log(data)});
-    starforceD_entire = await fetchData(actionBarList[1][2], (data)=>{console.log(data)});
-    scrollforce_entire = await fetchData(actionBarList[2][2], (data)=>{console.log(data)});
-    scrollforceD_entire = await fetchData(actionBarList[3][2], (data)=>{console.log(data)});
+    fetchData(actionBarList[0][2], function(data){console.log(data);starforce_entire=data;});
+    fetchData(actionBarList[1][2], function(data){console.log(data);starforceD_entire=data;});
+    fetchData(actionBarList[2][2], function(data){console.log(data);scrollforce_entire=data;});
+    fetchData(actionBarList[3][2], function(data){console.log(data);scrollforceD_entire=data;});
     renderStarforce();
 }
-
 
 init();
