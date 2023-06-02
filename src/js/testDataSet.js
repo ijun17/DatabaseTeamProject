@@ -53,9 +53,6 @@ const TEST_DATASET=[
             { success: 0, fail: 0 },
             { success: 0, fail: 0 },
             { success: 0, fail: 0 },
-            { success: 0, fail: 0 },
-            { success: 0, fail: 0 },
-            { success: 0, fail: 0 },
             { success: 0, fail: 0 }
         ],
         [
@@ -69,9 +66,7 @@ const TEST_DATASET=[
             { success: 0, fail: 0 }, { success: 0, fail: 0 },
             { success: 0, fail: 0 }, { success: 0, fail: 0 },
             { success: 0, fail: 0 }, { success: 0, fail: 0 },
-            { success: 1, fail: 8 }, { success: 0, fail: 0 },
-            { success: 0, fail: 0 }, { success: 0, fail: 0 },
-            { success: 0, fail: 0 }
+            { success: 1, fail: 8 }
         ]
     ],
 
