@@ -18,7 +18,7 @@ function getRates(data){
 async function init(){
     renderActionBar();
     fetchData(actionBarList[0][2], function(data){starforce_entire=getRates(data);console.log(starforce_entire);});
-    fetchData(actionBarList[1][2], function(data){starforceDC_entire=getRates(data);starforceDS_entire=getRates(data);console.log(starforceDC_entire,starforceDS_entire);});
+    fetchData(actionBarList[1][2], function(data){starforceDC_entire=getRates(data[0]);starforceDS_entire=getRates(data[1]);console.log(starforceDC_entire,starforceDS_entire);});
     fetchData(actionBarList[2][2], function(data){scrollforce_entire=getRates(data);console.log(scrollforce_entire);});
     fetchData(actionBarList[3][2], function(data){scrollforceD_entire=getRates(data);console.log(scrollforceD_entire);});
 }
