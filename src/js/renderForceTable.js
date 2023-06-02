@@ -1,7 +1,7 @@
 const wrapper = document.querySelector(".wrapper");
 
 function getFT(name, body){
-    return `<h1 style="margin-left:30px">${name}</h1>
+    return `<h1>${name}</h1>
     <table class="starforce-table">
         <thead>
             <tr>
@@ -30,9 +30,9 @@ function getFTR(name, counts, successRate, breakRate){
     let rowspan=1+(F?1:0)+(B?1:0) //행 개수
     let sum=counts.success + (F?counts.fail:0) + (B?counts.breaks:0); 
     let title=`<td rowspan="${rowspan}"><span>${name}</span></td>`
-    let result=`<tr>${title+getFTRS("성공", counts.success, successRate, per(counts.success,sum))}</tr>`
-    if(F)result+=`<tr style="color:red">${getFTRS("실패", counts.fail, 100-successRate-breakRate, per(counts.fail,sum))}</tr>`
-    if(B)result+=`<tr style="color:grey">${getFTRS("파괴", counts.breaks, breakRate, per(counts.breaks,sum))}</tr>`
+    let result=`<tr">${title+getFTRS("성공", counts.success, successRate, per(counts.success,sum))}</tr>`
+    if(F)result+=`<tr style="color:gray;background-color: #f9f9f9;">${getFTRS("실패", counts.fail, 100-successRate-breakRate, per(counts.fail,sum))}</tr>`
+    if(B)result+=`<tr style="color:red">${getFTRS("파괴", counts.breaks, breakRate, per(counts.breaks,sum))}</tr>`
     return result;
 }
 

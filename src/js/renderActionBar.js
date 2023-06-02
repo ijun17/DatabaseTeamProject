@@ -10,7 +10,8 @@ const actionBarList = [
     ["장비 아이템 획득",renderJangItemGet,"/getItem"],
     ["소비 아이템 획득",renderSoItemGet,"/getItemConsume"],
     ["소비 아이템 사용",renderSoItemUse,"/useItem"],
-    ["월드아이템 구매",renderItemChart,"/purchaseItem"]
+    ["월드아이템 구매",renderItemChart,"/purchaseItem"],
+    ["월드아이템 가격별 수익",renderItemChartPrice,"/salesByPrice"]
 ]
 
 function getUserID(){

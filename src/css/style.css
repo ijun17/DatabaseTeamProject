@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+h1{
+  margin-left:30px;
+}
+
+/*  */
 .search-user {
   display: flex;
   align-items: center;
@@ -68,9 +73,6 @@ table th {
   color: #fff;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
 
 
 /* 아이템 리스트 */
@@ -95,4 +97,10 @@ li:hover {
 
 li:nth-child(1) {
   color:goldenrod;
+}
+
+/* canvas */
+
+canvas{
+  margin:50px;
 }
