@@ -1,6 +1,6 @@
 const wrapper = document.querySelector(".wrapper");
 
-function getFT(name, body){
+function getFT(name, body, user){
     return `<h1>${name}</h1>
     <table class="starforce-table">
         <thead>
@@ -10,7 +10,7 @@ function getFT(name, body){
                 <th><span>횟수</span></th>
                 <th><span>설정 확률</span></th>
                 <th><span>실제 확률</span></th>
-                <th><span>편차</span></th>
+                ${<th><span>편차</span></th>}
             </tr>
         </thead>
         <tbody class="starforce-body">${body}</tbody>
