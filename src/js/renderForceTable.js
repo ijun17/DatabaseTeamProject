@@ -49,10 +49,10 @@ function renderStarforce(data){
 
 function renderStarforcePreventBreak(data){
     let innerHTML="";
-    for(let i=0; i<data[0].length; i++)innerHTML += getFTR(i+"성", data[0][i], STARFORCE_SUCCESS_RATE[i]+STARFORCE_BREAK_RATE[i],0)
+    for(let i=15; i<data[0].length; i++)innerHTML += getFTR(i+"성", data[0][i], STARFORCE_SUCCESS_RATE[i]+STARFORCE_BREAK_RATE[i],0)
     wrapper.innerHTML= getFT("스타포스(파괴방지-코인)", innerHTML);
     innerHTML="";
-    for(let i=0; i<data[1].length; i++)innerHTML += getFTR(i+"성", data[1][i], STARFORCE_SUCCESS_RATE[i]+STARFORCE_BREAK_RATE[i],0)
+    for(let i=15; i<data[1].length; i++)innerHTML += getFTR(i+"성", data[1][i], STARFORCE_SUCCESS_RATE[i]+STARFORCE_BREAK_RATE[i],0)
     wrapper.innerHTML+= getFT("스타포스(파괴방지-주문서)", innerHTML);
 }
 
