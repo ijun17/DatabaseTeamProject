@@ -53,10 +53,11 @@ function renderItemChartPrice(data){
     console.log(data);
     let labels=["판매가격"];
     let datasets=[];
-    let datas=[];
+    let datasets2=[];
     for(let i=0,l=data.length; i<l; i++){
-        //labels.push(data[i].price);
         datasets.push(addChartData(data[i].price, [Number(data[i].purchaseCount)*data[i].price], getColor(i)));
+        datasets2.push(addChartData(data[i].price, [Number(data[i].purchaseCount)], getColor(i)));
     }
     createChart("bar", "월드아이템 가격별 수익", labels, datasets)
+    createChart("bar", "월드아이템 가격별 판매 개수", labels, datasets2)
 }
