@@ -31,7 +31,7 @@ function renderItemChart(data){
         },
         options: {responsive: false}
     }
-    for(let i=0,l=data.length/2; i<l; i++)
-        config.data.datasets.push(addChartData(data[i*2], data[i*2+1], getColor(i)));
+    for(let i=0,l=data.length/3; i<l; i++)
+        config.data.datasets.push(addChartData(data[i*3], data[i*3+1], getColor(i)));
     const myChart = new Chart(ctx, config);
 }
