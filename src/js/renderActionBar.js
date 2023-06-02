@@ -20,11 +20,11 @@ function getUserID(){
     else return "/"+value;
 }
 
-function fetchData(key, callback) {
+async function fetchData(key, callback) {
     let url=key+getUserID()
     console.log(url)
     wrapper.innerHTML=""
-    fetch(url)
+    return fetch(url)
         .then(response => response.json())
         .then(data => {callback(data);})
         .catch(error => console.error('Error:', error));
