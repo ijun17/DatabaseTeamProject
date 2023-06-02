@@ -9,7 +9,11 @@ function addChartData(lable, data, color){
     }
 }
 
-
+function getColor(i){
+    const color=["red", "orange", "yellow", "chartreuse","green", "skyblue", "blue", "darkblue", "blueviolet", "black"];
+    if(i<10)return color[i];
+    return "black";
+}
 
 
 function renderItemChart(data){
@@ -18,7 +22,6 @@ function renderItemChart(data){
     let canvas = document.getElementById("myChart");
     let ctx = canvas.getContext('2d');
 
-    const color=["red", "orange", "yellow", "chartreuse","green", "skyblue", "blue", "darkblue", "blueviolet", "black"];
     const labels=['1월', '2월', '3월', '4월', '5월', '6월']
     const config={
         type: 'line',
@@ -29,6 +32,6 @@ function renderItemChart(data){
         options: {responsive: false}
     }
     for(let i=0,l=Math.min(data.length/2,10); i<l; i++)
-        config.data.datasets.push(addChartData(data[i*2], data[i*2+1], color[i]));
+        config.data.datasets.push(addChartData(data[i*2], data[i*2+1], getColor(i)));
     const myChart = new Chart(ctx, config);
 }

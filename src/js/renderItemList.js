@@ -8,18 +8,18 @@ function addLi(item){
 
 function renderJangItemGet(data){
     let innerHTML="";
-    for(let i=0,l=Math.min(10,data.length); i<l; i++)innerHTML+=addLi(data[i])
+    for(let i=0,l=data.length; i<l; i++)innerHTML+=addLi(data[i])
     wrapper.innerHTML= addL("장비 아이템 획득", innerHTML);
 }
 
 function renderSoItemGet(data){
     let innerHTML="";
-    for(let i=0,l=Math.min(10,data.length); i<l; i++)innerHTML+=addLi(data[i])
+    for(let i=0,l=data.length; i<l; i++)innerHTML+=addLi(data[i])
     wrapper.innerHTML= addL("소비 아이템 획득", innerHTML);
 }
 
 function renderSoItemUse(data){
     let innerHTML="";
-    for(let i=0,l=Math.min(10,data.length); i<l; i++)innerHTML+=addLi(data[i])
+    for(let i=0,l=data.length; i<l; i++)innerHTML+=addLi(data[i])
     wrapper.innerHTML= addL("소비 아이템 사용", innerHTML);
 }

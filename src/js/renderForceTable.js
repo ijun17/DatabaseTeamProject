@@ -69,8 +69,8 @@ function renderScrollforcePreventBreak(data){
         getFTR("악마의 주문서 70%", data[0][0], SCROLLFORCE_RATE[0])
         + getFTR("신비한 악마의 주문서 90%", data[0][1], SCROLLFORCE_RATE[1])
         + getFTR("이노센트 주문서 50%", data[0][2], SCROLLFORCE_RATE[2]));
-    wrapper.innerHTML+= getFT("주문서 강화(파괴방지-코인)", 
-        getFTR("악마의 주문서 70%", data[1][0], SCROLLFORCE_RATE[0])
-        + getFTR("신비한 악마의 주문서 90%", data[1][1], SCROLLFORCE_RATE[1])
-        + getFTR("이노센트 주문서 50%", data[1][2], SCROLLFORCE_RATE[2]));
+    // wrapper.innerHTML+= getFT("주문서 강화(파괴방지-코인)", 
+    //     getFTR("악마의 주문서 70%", data[1][0], SCROLLFORCE_RATE[0])
+    //     + getFTR("신비한 악마의 주문서 90%", data[1][1], SCROLLFORCE_RATE[1])
+    //     + getFTR("이노센트 주문서 50%", data[1][2], SCROLLFORCE_RATE[2]));
 }
