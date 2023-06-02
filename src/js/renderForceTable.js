@@ -43,16 +43,16 @@ const SCROLLFORCE_RATE=[70,90,50]; //70, 90은 파괴 가능
 
 function renderStarforce(data){
     let innerHTML="";
-    for(let i=0; i<25; i++)innerHTML += getFTR(i+"성", data[i], STARFORCE_RATE[i])
+    for(let i=0; i<data.length; i++)innerHTML += getFTR(i+"성", data[i], STARFORCE_RATE[i])
     wrapper.innerHTML= getFT("스타포스", innerHTML);
 }
 
 function renderStarforcePreventBreak(data){
     let innerHTML="";
-    for(let i=0; i<25; i++)innerHTML += getFTR(i+"성", data[0][i], STARFORCE_RATE[i])
+    for(let i=0; i<data[0].length; i++)innerHTML += getFTR(i+"성", data[0][i], STARFORCE_RATE[i])
     wrapper.innerHTML= getFT("스타포스(파괴방지-코인)", innerHTML);
     innerHTML="";
-    for(let i=0; i<25; i++)innerHTML += getFTR(i+"성", data[1][i], STARFORCE_RATE[i])
+    for(let i=0; i<data[1].length; i++)innerHTML += getFTR(i+"성", data[1][i], STARFORCE_RATE[i])
     wrapper.innerHTML+= getFT("스타포스(파괴방지-주문서)", innerHTML);
 }
 
@@ -65,7 +65,7 @@ function renderScrollforce(data){
 }
 
 function renderScrollforcePreventBreak(data){
-    wrapper.innerHTML= getFT("주문서 강화(파괴방지-주문서)", 
+    wrapper.innerHTML= getFT("주문서 강화(파괴방지)", 
         getFTR("악마의 주문서 70%", data[0][0], SCROLLFORCE_RATE[0])
         + getFTR("신비한 악마의 주문서 90%", data[0][1], SCROLLFORCE_RATE[1])
         + getFTR("이노센트 주문서 50%", data[0][2], SCROLLFORCE_RATE[2]));
