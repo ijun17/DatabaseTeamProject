@@ -44,7 +44,7 @@ function renderItemChart(data){
         datasets2.push(addChartData(data[i*3], data[i*3+2], getColor(i)));
     }
     createChart("line", "월드아이템 월별 판매 개수",['1월','2월','3월','4월','5월','6월'], datasets);
-    createChart("line", "월드아이템 월별 판매 가격",['1월','2월','3월','4월','5월','6월'], datasets2);
+    createChart("line", "월드아이템 월별 수익",['1월','2월','3월','4월','5월','6월'], datasets2);
 }
 
 
