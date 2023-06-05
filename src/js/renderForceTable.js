@@ -69,7 +69,7 @@ function renderScrollforce(data){
 
 function renderScrollforcePreventBreak(data){
     wrapper.innerHTML= getFT("주문서 강화(파괴방지)", 
-        getFTR("악마의 주문서 70%", data[0], 100, 0,scrollforceD_entire[0])
-        + getFTR("신비한 악마의 주문서 90%", data[1], 100,0,scrollforceD_entire[1])
+        getFTR("악마의 주문서 70%", data[0], 70, 0,scrollforceD_entire[0])
+        + getFTR("신비한 악마의 주문서 90%", data[1], 90,0,scrollforceD_entire[1])
         + getFTR("이노센트 주문서 50%", data[2], 50, 0,scrollforceD_entire[2]));
 }
